@@ -1,0 +1,76 @@
+:root {
+    --block-width: 210px;
+    --block-height: 50px;
+    --animation-time: 0.5s;
+    --font-size: 18px;
+    --icon-offset: 10px;
+}
+
+.mainLink {
+    display: flex;
+}
+
+.linkPart {
+    display: block;
+    background-color: rgb(46, 46, 46);
+    border: 2px solid rgb(38, 38, 38);
+    border-radius: 1px;
+    height: var(--block-height);
+}
+
+.linkSelected {
+    box-shadow: 0 0 5px 0px rgba(200, 200, 200, 1);
+    z-index: 9999;
+}
+
+.linkBlock {
+    width: var(--block-height);
+    box-shadow: 0 2px 10px 2px rgba(40, 40, 40, 1);
+}
+
+.linkContent {
+    display: block;
+    width: var(--block-width);
+    height: var(--block-height);
+    color: white;
+    border-left: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.linkContentText {
+    font-size: var(--font-size);
+    line-height: var(--block-height);
+    margin-left: 10px;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.linkIcon {
+    width: calc(var(--block-height) - var(--icon-offset));
+    height: calc(var(--block-height) - var(--icon-offset));
+    padding: calc(var(--icon-offset) / 2);
+    vertical-align: middle;
+    color: rgb(200, 200, 200);
+}
+
+.list-transition-enter, .list-transition-appear {
+    display: block;
+    overflow: hidden;
+    width: 0;
+}
+
+.list-transition-enter-active, .list-transition-appear-active {
+    width: var(--block-width);
+    transition: width var(--animation-time) ease-in-out;
+}
+
+.list-transition-exit {
+    width: var(--block-width);
+    overflow: hidden;
+}
+
+.list-transition-exit-active {
+    width: 0;
+    transition: width var(--animation-time) ease-in-out;
+}
