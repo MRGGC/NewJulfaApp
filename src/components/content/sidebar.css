@@ -1,9 +1,5 @@
-:root {
-    --block-width: 210px;
-    --block-height: 50px;
-    --animation-time: 0.5s;
-    --font-size: 18px;
-    --icon-offset: 10px;
+.sidebar {
+    display: block;
 }
 
 .mainLink {
@@ -19,7 +15,7 @@
 }
 
 .linkSelected {
-    box-shadow: 0 0 5px 0px rgba(200, 200, 200, 1);
+    box-shadow: 0 0 5px 0 rgba(200, 200, 200, 1);
     z-index: 9999;
 }
 
@@ -28,14 +24,21 @@
     box-shadow: 0 2px 10px 2px rgba(40, 40, 40, 1);
 }
 
+.linkBlock:hover, .linkSelected:hover {
+    cursor: pointer;
+}
+
 .linkContent {
     display: block;
+    position: absolute;
+    left: calc(var(--block-height) + var(--content-padding));
     width: var(--block-width);
     height: var(--block-height);
     color: white;
     border-left: 0;
     padding: 0;
     margin: 0;
+    z-index: 1;
 }
 
 .linkContentText {
@@ -44,6 +47,7 @@
     margin-left: 10px;
     margin-right: 10px;
     white-space: nowrap;
+    user-select: none;
 }
 
 .linkIcon {

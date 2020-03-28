@@ -1,7 +1,19 @@
+:root {
+    --content-padding: 35px;
+    --block-width: 210px;
+    --block-height: 50px;
+    --animation-time: 0.5s;
+    --font-size: 18px;
+    --icon-offset: 10px;
+    --panel-offset: 30px;
+    --panel-width-offset: calc(var(--block-height) + var(--panel-offset));
+    --panel-height: 600px;
+}
+
 .content {
-    display: inline-block;
-    background-color: rgb(45, 45, 45);
-    padding: 35px;
+    display: inline-flex;
+    background-color: rgb(50, 50, 50);
+    padding: var(--content-padding);
     width: 100vw;
     box-sizing: border-box;
 }

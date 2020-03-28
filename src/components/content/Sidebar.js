@@ -10,7 +10,7 @@ export default function Sidebar() {
     ));
 
     return (
-        <div>
+        <div className={"sidebar"}>
             { links }
         </div>
     );
