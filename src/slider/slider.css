@@ -11,6 +11,12 @@ body{
     border-radius: 500px;
     margin: 14px 0;
 }
+.slider-bar-past{
+    background-color: rgb(45, 231, 85);
+    height: 7px;
+    border-radius: 500px;
+    margin: 14px 0;
+}
 
 span{
     background-color:red;
