@@ -88,7 +88,8 @@ class Slider extends React.Component {
                     style={{
                         width: "100%",
                         textAlign: "justify",
-                        padding: "0"
+                        padding: "0",
+                        
                     }}
                 >
                     1620 1630 1640 1650 1660 1670 1680 1690 1700 1710 1720

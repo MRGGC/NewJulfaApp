@@ -2,8 +2,8 @@ import React from 'react';
 import Slider from './slider/slider'
 
 function App() {
-    return (
-        <Slider/>
+    return ( <
+        Slider / >
     );
 }
 
