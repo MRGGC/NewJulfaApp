@@ -1,5 +1,5 @@
 import React from 'react';
-import Slider from './slider/slider'
+import Slider from './components/timeline/slider/slider'
 
 function App() {
     return ( <

@@ -31,7 +31,7 @@ class Slider extends React.Component {
         let output = s.coords.x;
         if (output > this.offset + this.len) output = this.offset + this.len;
         if (output < this.offset) output = this.offset;
-        this.updatePosition(((output - this.offset) / this.len) * 10);
+        this.updatePosition(((output - this.offset) / this.len) * 10.4 - 0.3);
     }
 
     sliderDragStart(e) {
