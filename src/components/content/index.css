@@ -1,0 +1,23 @@
+:root {
+    --content-padding: 35px;
+    --block-width: 210px;
+    --block-height: 50px;
+    --animation-time: 0.5s;
+    --font-size: 18px;
+    --icon-offset: 10px;
+    --panel-offset: 30px;
+    --panel-width-offset: calc(var(--block-height) + var(--panel-offset));
+    --panel-height: 600px;
+    --link-editor-width: 15px;
+    --link-edit-icon-size: 14px;
+    /*--link-adder-color: rgb(42, 163, 239);*/
+    --link-adder-color: rgb(40, 40, 40);
+}
+
+.content {
+    display: inline-flex;
+    background-color: rgb(50, 50, 50);
+    padding: var(--content-padding);
+    width: 100vw;
+    box-sizing: border-box;
+}
