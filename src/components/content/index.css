@@ -8,6 +8,10 @@
     --panel-offset: 30px;
     --panel-width-offset: calc(var(--block-height) + var(--panel-offset));
     --panel-height: 600px;
+    --link-editor-width: 15px;
+    --link-edit-icon-size: 14px;
+    /*--link-adder-color: rgb(42, 163, 239);*/
+    --link-adder-color: rgb(40, 40, 40);
 }
 
 .content {

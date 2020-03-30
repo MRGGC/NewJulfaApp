@@ -7,6 +7,7 @@ const defaultValue = {
         { id: '1', icon: 'FiGitlab', link_text: 'ինչ-որ բան 2', content: `<p>Էլի որ, ինչ-որ բան 2 :D</p>` },
         { id: '2', icon: 'TiChartBarOutline', link_text: 'ինչ-որ բան 3', content: `<p>Էլի որ, ինչ-որ բան 3 :D</p>` },
         { id: '3', icon: 'GoDatabase', link_text: 'ինչ-որ բան 4', content: `<p>Էլի որ, ինչ-որ բան 4 :D</p>` },
+        { id: '4', icon: 'FiCalendar', link_text: 'ինչ-որ բան 5', content: `<p>Էլի որ, ինչ-որ բան 5 :D</p>` },
     ],
     current: '0',
 };

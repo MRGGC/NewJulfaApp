@@ -1,0 +1,42 @@
+.linkAdder {
+    margin-top: 20px;
+    background-color: var(--link-adder-color);
+    border-radius: 100%;
+    border: none;
+    width: var(--block-height);
+    height: var(--block-height);
+}
+
+.addIcon {
+    font-size: 20px;
+    color: #fff;
+    padding: calc((var(--block-height) - 20px) / 2);
+}
+
+.editorPanel {
+    width: calc(100% - var(--panel-width-offset));
+    height: var(--panel-height);
+    padding-bottom: 115px;
+    margin-left: var(--panel-offset);
+    background-color: rgb(230, 230, 230);
+}
+
+.linkEditor {
+    display: block;
+    position: absolute;
+    left: calc(var(--content-padding) - var(--link-editor-width) - 5px);
+    height: var(--block-height);
+    width: var(--link-editor-width);
+}
+
+.linkEditor .link-up {
+    font-size: var(--link-edit-icon-size);
+}
+
+.linkEditor .link-down {
+    font-size: var(--link-edit-icon-size);
+}
+
+.linkEditor .link-delete {
+    font-size: var(--link-edit-icon-size);
+}
