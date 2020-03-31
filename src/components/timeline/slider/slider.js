@@ -30,7 +30,7 @@ class Slider extends React.Component {
         let coords = s.coords.x;
         if (coords > this.offset + this.len) coords = this.offset + this.len;
         if (coords < this.offset) coords = this.offset;
-        let output = (((coords - this.offset) / this.len) * (1/0.955) - 0.03);
+        let output = (((coords - this.offset) / this.len) * (1/0.945) - 0.03);
         this.updatePosition(output * this.state.vlength);
     }
 
@@ -49,7 +49,7 @@ class Slider extends React.Component {
     updatePosition = n => {
         let outputState = this.state;
         outputState.position = n;
-        let outputPercent = (n / this.state.vlength) * 95.5 + 2;
+        let outputPercent = (n / this.state.vlength) * 94.5 + 2.5;
         outputState.renderPosition = outputPercent + "%";
         this.setState(outputState);
     }

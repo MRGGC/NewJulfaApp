@@ -5,7 +5,7 @@ import Slider from './components/timeline/slider/slider'
 function App() {
     return (
         <div className="App">
-            <Slider values={[1620, 1920, 1324, 1236, 6434, 7634, 5212, 5235, 5123, 1231, 5432, 5123, 7453]} />
+            <Slider values={[1620, 1630, 1640, 1650, 1660, 1670, 1680, 1690, 1700, 1710, 1720]} />
             <Content />
         </div>
     );
