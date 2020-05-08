@@ -30,7 +30,7 @@ class Slider extends React.Component {
         let coords = s.coords.x;
         if (coords > this.offset + this.len) coords = this.offset + this.len;
         if (coords < this.offset) coords = this.offset;
-        let output = (((coords - this.offset) / this.len) * (1/0.945) - 0.03);
+        let output = (((coords - this.offset) / this.len) * (1 / 0.945) - 0.03);
         this.updatePosition(output * this.state.vlength);
     }
 
@@ -43,7 +43,9 @@ class Slider extends React.Component {
         document.removeEventListener("mouseup", this.sliderDragEnd);
         document.removeEventListener("mousemove", this.sliderDrag);
 
-        this.updatePosition(Math.round(this.state.position));
+        var n = Math.round(this.state.position);
+        this.updatePosition(n);
+        this.props.onYearChange(this.props.values[n]);
     }
 
     updatePosition = n => {
@@ -91,6 +93,7 @@ class Slider extends React.Component {
                         width: "100%",
                         textAlign: "justify",
                         padding: "0",
+                        color: "white"
 
                     }}
                 >
