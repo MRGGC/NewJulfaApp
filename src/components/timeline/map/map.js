@@ -1,55 +1,15 @@
 import React from 'react';
 import { VectorMap } from "react-jvectormap"
 import './jquery-jvectormap.css'
+import { GetNodes } from '../../../services/api';
 
 
 class Map extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { year: this.props.year };
-        this.info = {
-            "1680": [
-                {
-                    "latLng": [
-                        40.372338,
-                        44.85211
-                    ],
-                    "name": "angirstan",
-                    "text": "this place is known for angir",
-                    "status": "new"
-                },
-                {
-                    "latLng": [
-                        40.372338,
-                        44.85211
-                    ],
-                    "name": "angirstan 2",
-                    "text": "this place is even more known for angir",
-                    "status": "alive"
-                }
-            ],
-            "1690": [
-                {
-                    "latLng": [
-                        40.372338,
-                        45.85211
-                    ],
-                    "name": "krinj",
-                    "text": "lmao exdddddd",
-                    "status": "dead"
-                },
-                {
-                    "latLng": [
-                        40.372338,
-                        43.85211
-                    ],
-                    "name": "angirstan 69",
-                    "text": "this is text info about node kthx",
-                    "status": "dead"
-                }
-            ]
-        };
+        this.state = { year: this.props.year, loaded: false };
+        this.info = {};
         this.map = React.createRef();
     }
 
@@ -57,7 +17,9 @@ class Map extends React.Component {
         alert(this.state.year);
     }
 
-    componentDidMount() {
+    async componentDidMount() {
+        this.info = await GetNodes();
+        console.log("INFO", this.info);
         this.updateMarkers(this.year);
     }
 

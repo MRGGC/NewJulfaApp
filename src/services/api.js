@@ -17,3 +17,10 @@ export async function GetContent() {
 
     return content;
 }
+
+export async function GetNodes() {
+    const url = REST.SERVER + '/save/coordinatesget';
+    const content = await REST.sendGETRequest(url);
+
+    return content;
+}
