@@ -4,6 +4,7 @@ import { AuthContext } from '../../contexts/AuthContext';
 import Link from './Link';
 import LinkAdder from './LinkAdder';
 import LinkSaver from './LinkSaver';
+import LinkLogout from './LinkLogout';
 
 export default function Sidebar() {
     const contentContext = useContext(ContentContext);
@@ -18,6 +19,7 @@ export default function Sidebar() {
             { links }
             { logged ? (<LinkAdder />) : null }
             { logged ? (<LinkSaver />) : null }
+            { logged ? (<LinkLogout />) : null }
         </div>
     );
 }

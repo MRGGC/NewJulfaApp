@@ -13,7 +13,7 @@ export default function LinkAdder() {
         const icon = prompt("Իկոնկայի Անվանումը՝");
         if (!icon) return;
 
-        dispatchArticles({ type: 'ADD_ARTICLE', icon: icon, link_text: title });
+        dispatchArticles({ type: 'ADD_ARTICLE', icon: icon, link_text: title, k: Math.random() });
     };
 
     return (

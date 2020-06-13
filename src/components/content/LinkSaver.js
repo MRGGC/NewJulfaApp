@@ -12,11 +12,7 @@ export default function LinkSaver() {
         console.log("SAVING");
         console.log(current, list);
 
-        let content = null;
-        for (let _content of list)
-            if (_content.id === current) content = _content;
-
-        const status = await SaveContent(content);
+        const status = await SaveContent(list);
 
         if (!status)
             alert('ERROR');

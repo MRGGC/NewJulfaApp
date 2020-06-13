@@ -20,7 +20,7 @@ export const verifyAccessToken = async (access_token) => {
         const decoded = jwt_decode(access_token);
         const exp = decoded['exp'];
 
-        if (Date.now() >= exp) {
+        if (exp && Date.now() >= exp) {
             const refresh_token = await Storage.retrieveData('refresh_token');
 
             const res = await sendPOSTRequest(SERVER + '/token', { refresh_token });
@@ -36,9 +36,9 @@ export async function sendPOSTRequest(url, data, access_token) {
     const req = {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+            'Content-Type': 'application/json'
         },
-        body: JSON2Body(data)
+        body: JSON.stringify(data)
     };
 
     if (access_token) req.headers['Authorization'] = `${TOKEN_TYPE} ${access_token}`;

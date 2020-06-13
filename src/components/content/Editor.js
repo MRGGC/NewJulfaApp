@@ -51,6 +51,8 @@ class Editor extends React.Component {
             [{ 'font': [] }],
             [{ 'align': [] }],
 
+            ['link', 'image', 'video'],
+
             ['clean']
         ],
     };
@@ -67,6 +69,7 @@ class Editor extends React.Component {
         'color', 'background',
         'font',
         'align',
+        'link', 'image', 'video',
         'clean',
     ];
 

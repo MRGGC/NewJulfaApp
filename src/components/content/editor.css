@@ -13,6 +13,12 @@
     padding: calc((var(--block-height) - 20px) / 2);
 }
 
+.logoutIcon {
+    font-size: 20px;
+    color: rgb(230, 88, 84);
+    padding: calc((var(--block-height) - 20px) / 2);
+}
+
 .editorPanel {
     width: calc(100% - var(--panel-width-offset));
     height: var(--panel-height);

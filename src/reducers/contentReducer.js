@@ -10,7 +10,9 @@ export default function contentReducer(state, action) {
             return {...state, current: action.current};
 
         case 'ADD_ARTICLE':
-            newState.list.push({ id: uuidv1(), icon: action.icon, link_text: action.link_text, content: 'ՏԵՔՍՏ' });
+            if (!~~memo[action.k + ''])
+                newState.list.push({ id: uuidv1(), icon: action.icon, link_text: action.link_text, content: '<p>ՏԵՔՍՏ</p>' });
+            memo[action.k + ''] = true;
             return newState;
 
         case 'EDIT_ARTICLE':
