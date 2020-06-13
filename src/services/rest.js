@@ -1,7 +1,7 @@
 import jwt_decode from 'jwt-decode'
 import {SERVER_HOSTNAME, SERVER_PORT, SERVER_PROTOCOL, TOKEN_TYPE} from '../config'
 
-export const SERVER = `${SERVER_PROTOCOL}://${SERVER_HOSTNAME}:${SERVER_PORT}`;
+export const SERVER = `${SERVER_PROTOCOL}://${SERVER_HOSTNAME}`;
 
 const JSON2Body = (data) => {
     let formBody = [];
